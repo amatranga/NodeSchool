@@ -24,15 +24,13 @@ class InputForm extends React.Component {
 
   render() {
     return (
-      <div className="row justify-content-center">
-        <form id="input-form" onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="Address">Address</label>
-            <input type="text" className="form-control" placeholder="Address" required onChange={this.handleChange}/>
-          </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
-      </div>
+      <form id="input-form" onSubmit={this.handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="Address">Address</label>
+          <input type="text" className="form-control" placeholder="Address" required onChange={this.handleChange}/>
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form> 
     );
   }
 }

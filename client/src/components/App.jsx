@@ -15,7 +15,6 @@ class App extends React.Component {
   }
 
   submitAddress(address) {
-    event.preventDefault();
     this.setState({address})
   }
 
