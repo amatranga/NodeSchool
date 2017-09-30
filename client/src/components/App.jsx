@@ -7,7 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      address: ''
+      address: '',
+      results: []
     }
 
     this.submitAddress = this.submitAddress.bind(this);
@@ -22,9 +23,9 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <InputForm submitAddress={this.submitAddress}/>
+        <InputForm submitAddress={this.submitAddress} />
         <hr />
-        <Results />
+        <Results results={this.state.results} />
       </div>
     );
   }
