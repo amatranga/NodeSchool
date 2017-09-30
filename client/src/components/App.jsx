@@ -16,12 +16,10 @@ class App extends React.Component {
 
   submitAddress(address) {
     this.setState({address});
-    ajax({
-      url: `/search?address=${address}`
+    axios.get(`/search?address=${address}`)
+    .then(results => {
+      console.log(results);
     })
-    .done((results) => {
-      this.setState({results});
-    });
   }
 
   render() {
