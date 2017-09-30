@@ -1,4 +1,5 @@
 import React from 'react';
+import Picture from './Picture';
 
 class Results extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class Results extends React.Component {
   render() {
     return (
       <div>
-        Results go here
+        Map over Picture Components here!
+        <Picture />
       </div>
     );
   }
