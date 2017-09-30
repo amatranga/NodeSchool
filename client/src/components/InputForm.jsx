@@ -11,10 +11,6 @@ class InputForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount() {
-    console.log(this.props, 'props in inputForm');
-  }
-
   handleChange(event) {
     let address = event.target.value;
     this.setState({address});
