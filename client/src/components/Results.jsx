@@ -4,8 +4,9 @@ import Picture from './Picture';
 const Results = (props) => {
   return (
     <div>
-      Map over Picture Components here!
-      <Picture />
+      {props.results.map((picture, idx) => 
+        <Picture id={idx} picture={picture}/>
+      )}
     </div>
   );    
 }

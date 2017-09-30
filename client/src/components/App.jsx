@@ -15,7 +15,13 @@ class App extends React.Component {
   }
 
   submitAddress(address) {
-    this.setState({address})
+    this.setState({address});
+    ajax({
+      url: `/search?address=${address}`
+    })
+    .done((results) => {
+      this.setState({results});
+    });
   }
 
   render() {
