@@ -7,13 +7,10 @@ const request = require('request');
 app.use(express.static(path.join(__dirname, '../')));
 
 app.get('/search', function(req, res, next) {
-  console.log(req.query); 
   address = req.query.address;
 
   let apiKey = 'AIzaSyDlFlMD-AF24FF2uSZLO1qdXhqYqjOtmkU';
 request('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=' + apiKey, function (error, response, body) {
-  console.log('error:', error);
-  console.log('statusCode:', response && response.statusCode);
 
   let latInput = JSON.parse(body).results[0].geometry.location.lat;
   let lngInput = JSON.parse(body).results[0].geometry.location.lng;
