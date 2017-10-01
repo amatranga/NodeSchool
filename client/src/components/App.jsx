@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import InputForm from './InputForm';
 import Results from './Results';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class App extends React.Component {
     axios.get(`/search?address=${address}`)
     .then(results => {
       console.log(results);
-    })
+      this.setState({results});
+    });
   }
 
   render() {
