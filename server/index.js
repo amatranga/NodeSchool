@@ -15,7 +15,7 @@ app.get('/search', function(req, res, next) {
       lat: data.geoData.geometry.location.lat,
       lng: data.geoData.geometry.location.lng
     }
-    geoData.getRandomizedUrls(coordinates, resultCount=30, result => {
+    geoData.getRandomizedUrls(coordinates, resultCount, result => {
       res.send(result.urls);
     });
   });

@@ -14,7 +14,7 @@ module.exports = {
     });
   },
 
-  getRandomizedUrls(coordinates, resultCount, cb) {
+  getRandomizedUrls(coordinates, resultCount=30, cb) {
     let urlsArr = [];
     let lat = String(coordinates.lat);
     let lng = String(coordinates.lng);
