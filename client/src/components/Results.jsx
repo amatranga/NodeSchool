@@ -2,12 +2,17 @@ import React from 'react';
 import Picture from './Picture';
 
 const Results = (props) => {
-  return (
-    <div>
-      Map over Picture Components here!
-      <Picture />
-    </div>
-  );    
+  if (props.results.data) {
+    return (
+      <div>
+        {props.results.data.map((picture, idx) => 
+          <Picture id={idx} picture={picture}/>
+        )}
+      </div>
+    );    
+  } else {
+    return ( <div>Enter an address to see some images</div>);
+  }
 }
 
 export default Results;
